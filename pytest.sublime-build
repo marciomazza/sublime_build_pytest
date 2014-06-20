@@ -1,0 +1,17 @@
+// Assumes a virtualenv inside ~/.virtualenvs that has the same name as the project
+// Assumes manage.py is inside src
+{
+    "working_dir": "${project_path}/src",
+    "shell_cmd": "~/.virtualenvs/${project_base_name}/bin/py.test",
+    "file_regex": "^(...*?):(\\d*): .+$",
+    "syntax": "Packages/User/sublime_build_pytest/pytest output.tmLanguage",
+    "quiet": "True",
+
+    "variants": [
+        {
+            "working_dir": "${project_path}/src",
+            "shell_cmd": "~/.virtualenvs/${project_base_name}/bin/py.test --cov . --cov-report term --cov-report html && firefox htmlcov/index.html 2>/dev/null",
+            "name": "Run",
+        }
+    ]
+}

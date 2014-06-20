@@ -1,0 +1,55 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+{   "name": "pytest output",
+    "scopeName": "pytest.output",
+    "patterns": [
+        { "match": "^===+ test session starts ===+$",
+          "name": "comment.line"
+        },
+        { "match": "^platform .+$",
+          "name": "comment.line"
+        },
+        { "match": "^plugins: .+$",
+          "name": "comment.line"
+        },
+        { "match": "^collected (\\d+) items$",
+          "name": "pytest.collected",
+          "captures": {
+              "0": { "name": "string" },
+              "1": { "name": "variable.parameter" }
+           }
+        },
+        { "match": "^===+ FAILURES ===+$",
+          "name": "comment.line"
+        },
+        { "match": "^___+ (.+) ___+$",
+          "name": "pytest.function",
+          "captures": {
+              "1": { "name": "support.function" },
+              "2": { "name": "variable.parameter" }
+           }
+        },
+        { "match": "E   .+",
+          "name": "message.error"
+        },
+        { "match": "^(...*?):(\\d*): .+$",
+          "name": "location",
+          "captures": {
+              "0": { "name": "string" }
+           }
+        },
+        { "match": "===+ (\\d+) failed.+===$",
+          "name": "pytest.failed",
+          "captures": {
+              "0": { "name": "message.error" },
+              "1": { "name": "variable.parameter" }
+           }
+        },
+        { "match": "===+ (\\d+) passed.+===$",
+          "name": "pytest.passed",
+          "captures": {
+              "0": { "name": "support.function" }
+           }
+        }
+    ],
+    "uuid": "97eec1c2-cddd-44bd-94b5-32f974e1cbf8"
+}
