@@ -1,0 +1,2 @@
+To generate the proper plist file run the command (Ctrl+Shift+P):
+    "z:AAAPackageDev: Convert (YAML, JSON, PList) to…"
