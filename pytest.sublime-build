@@ -4,7 +4,7 @@
     "working_dir": "${project_path}",
     "shell_cmd": "~/.virtualenvs/${project_base_name}/bin/py.test",
     "file_regex": "^(...*?):(\\d*):",
-    "syntax": "Packages/sublime_build_pytest/pytest output.tmLanguage",
+    "syntax": "Packages/User/sublime_build_pytest/pytest_output.tmLanguage",
     "quiet": "True",
 
     "variants": [
